@@ -44,7 +44,11 @@ timer();
     clearInterval(x);
     document.getElementById("vid").style.display = "none";
     document.getElementById("cdntimer").style.display = "none";
-
+    document.getElementById("c").style.display = "block";
     }
     }, 1000);
   }
+
+  
+  
+  document.addEventListener('contextmenu', event => event.preventDefault());

@@ -23,6 +23,7 @@ h4 {
 
 
 .card {
+	display: none;
 	color: #013243; /*SHERPA BLUE*/
 	position: absolute;
 	top: 50%;
