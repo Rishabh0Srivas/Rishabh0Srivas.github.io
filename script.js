@@ -52,3 +52,6 @@ timer();
   
   
   document.addEventListener('contextmenu', event => event.preventDefault());
+  window.onload=function(){
+    document.getElementById("player").play();
+  }
