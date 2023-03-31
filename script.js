@@ -55,3 +55,27 @@ timer();
   window.onload=function(){
     document.getElementById("player").play();
   }
+
+
+
+  // Flipbook
+
+
+  
+function randomIntFromInterval(min, max) { 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+p1 = randomIntFromInterval(1,40)
+p2 = randomIntFromInterval(1,40)
+p3 = randomIntFromInterval(1,40)
+p4 = randomIntFromInterval(1,40)
+
+console.log(p1,":",p2,":",p3,":",p4)
+
+var r = document.querySelector(':root');
+r.style.setProperty('--pic1', `url("./assets/p${p1}.jpg")`);
+r.style.setProperty('--pic2', `url("./assets/p${p2}.jpg")`);
+r.style.setProperty('--pic3', `url("./assets/p${p3}.jpg")`);
+r.style.setProperty('--pic4', `url("./assets/p${p4}.jpg")`);
+r.style.setProperty('--pic5', 'url("./assets/p40.jpg")');
