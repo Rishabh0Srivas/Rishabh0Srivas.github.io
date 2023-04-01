@@ -203,8 +203,8 @@ video{
 	position: absolute;
 	z-index: 4;
 	color:  #ffb7c5;
-	top: 10%;
-	right: 30%;
+	top: 50%;
+    left: 50%;
 	font-size: 1.5rem;
 }
 
