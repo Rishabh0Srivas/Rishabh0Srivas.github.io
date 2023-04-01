@@ -58,24 +58,68 @@ timer();
 
 
 
-  // Flipbook
+
+  // Typing
 
 
-  
-function randomIntFromInterval(min, max) { 
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
 
-p1 = randomIntFromInterval(1,40)
-p2 = randomIntFromInterval(1,40)
-p3 = randomIntFromInterval(1,40)
-p4 = randomIntFromInterval(1,40)
-
-console.log(p1,":",p2,":",p3,":",p4)
-
-var r = document.querySelector(':root');
-r.style.setProperty('--pic1', `url("./assets/p${p1}.jpg")`);
-r.style.setProperty('--pic2', `url("./assets/p${p2}.jpg")`);
-r.style.setProperty('--pic3', `url("./assets/p${p3}.jpg")`);
-r.style.setProperty('--pic4', `url("./assets/p${p4}.jpg")`);
-r.style.setProperty('--pic5', 'url("./assets/p40.jpg")');
+  var aText = new Array(
+    "Lonely nights with soaking pillows", 
+    "the freezing breeze that fills you with sorrow",
+    "your body lies down but your mind would never",
+    "and thoughts you hold tight, would tie you forever",
+    "are you longing for the end? are you suffering from pain?",
+    "are you wishing to go back all the way from back then?",
+    "when the light in your eyes was shining bright as fire?",
+    "or the darkness in desperation was nowhere to find?",
+    "i know",
+    "deep down in there",
+    "you are broken,",
+    "you are imprisoned",
+    "you are trapped in your own depression",
+    "they say you are not enough",
+    "like they fucking ask you to be on top",
+    "but no one was born as perfect as gods",
+    "so we are just that, imperfect human",
+    "the grades won't speak up for your true borned talents",
+    "maybe we'll all die sooner or later",
+    "death would kiss you goodnight as light as a feather",
+    "then why wasting your time to care about others?",
+    "your life is only yours so find how to make it better",
+    "but hey, you know, just a small reminder",
+    "that i love you and hope that you'll love yourself forever"
+    );
+    var iSpeed = 100; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 4; // start scrolling up at this many lines
+     
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+     
+    function typewriter()
+    {
+     sContents =  ' ';
+     iRow = Math.max(0, iIndex-iScrollAt);
+     var destination = document.getElementById("typedtext");
+     
+     while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+     }
+     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    // console.log(sContents + aText[iIndex].substring(0, iTextPos) + "_")
+     if ( iTextPos++ == iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex != aText.length ) {
+       iArrLength = aText[iIndex].length;
+       setTimeout("typewriter()", 500);
+      }
+     } else {
+      setTimeout("typewriter()", iSpeed);
+     }
+    }
+    
+    
+    typewriter();
