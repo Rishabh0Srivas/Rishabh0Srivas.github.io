@@ -83,7 +83,7 @@ timer();
     "Embrace your journey, for it's what makes you whole.",
     "And when you look back on your life, you'll see how far you've grown.",
     "And, let me tell you",
-    "You are worth more than gold.",
+    "You are worth more than the multiverse.",
     "( ͡≖ ͜ʖ ͡≖)✌"
     );
     var iSpeed = 100; // time delay of print out
