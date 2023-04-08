@@ -3,7 +3,7 @@
 
 body {
 	font-family: 'Indie Flower', cursive !important;
-  background: #FDE3A7; /*CAPE HONEY*/
+  background: black; /*CAPE HONEY*/
 	margin: 0px;
 	padding: 0px;
 }
@@ -137,6 +137,9 @@ video{
     min-width: 100%;
     min-height: 100%;
     z-index: 2;
+	/* text-align: center; */
+	margin: auto;
+	width: 50%;
   }
   #cdntimer{
     position: fixed;
